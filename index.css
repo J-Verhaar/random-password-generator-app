@@ -1,6 +1,7 @@
 :root {
   --background: #1f2937;
   --text: #fff;
+  --textTwo: #d5d4d8;
   --header-font: Karla, Arial;
   --text-font: Inter, Arial;
   --green: #10b981;
@@ -9,10 +10,28 @@
   font-family: var(--text-font);
 }
 
-h1 {
-  font-family: var(--header-font);
-}
-
 body {
   margin: 0;
+}
+
+#header-el {
+  font-family: var(--header-font);
+  color: var(--text);
+}
+#header-part-el {
+  color: var(--green);
+}
+
+#lower-header-el {
+  color: var(--textTwo);
+}
+
+#generate-btn-el {
+  background-color: var(--green);
+  border: none;
+  border-radius: 6px;
+}
+
+#horizontal-devider-el {
+  width: 95%;
 }
