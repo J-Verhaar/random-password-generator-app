@@ -1,3 +1,18 @@
+:root {
+  --background: #1f2937;
+  --text: #fff;
+  --header-font: Karla, Arial;
+  --text-font: Inter, Arial;
+  --green: #10b981;
+  color: var(--text);
+  background-color: var(--background);
+  font-family: var(--text-font);
+}
+
+h1 {
+  font-family: var(--header-font);
+}
+
 body {
-    margin: 0;
+  margin: 0;
 }
