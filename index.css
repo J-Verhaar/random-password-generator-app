@@ -1,10 +1,25 @@
 :root {
   --background: #1f2937;
+  --backgroundSecondary: #2f3e53;
   --text: #fff;
-  --textTwo: #d5d4d8;
-  --header-font: Karla, Arial;
-  --text-font: Inter, Arial;
-  --green: #10b981;
+  --textSecondary: #d5d4d8;
+  --headerFont: Karla, Arial;
+  --textFont: Inter, Arial;
+  --green: #55f991;
+  --greenSecondary: #10b981;
+  --6px: 0.375rem;
+  --9px: 0.5625rem;
+  --10px: 0.625rem;
+  --12-8px: 0.8rem;
+  --15px: 0.9375rem;
+  --16px: 1rem;
+  --20px: 1.25rem;
+  --25px: 1.5625rem;
+  --32px: 2rem;
+  --40px: 2.5rem;
+  --45px: 2.8125rem;
+  --200px: 12.5rem;
+  --352px: 22rem;
   color: var(--text);
   background-color: var(--background);
   font-family: var(--text-font);
@@ -14,8 +29,18 @@ body {
   margin: 0;
 }
 
+#container {
+  margin: 40px;
+}
+
 #header-el {
-  font-family: var(--header-font);
+  width: var(--352px);
+  margin-top: 0px;
+  margin-bottom: var(--12-8px);
+
+  font-family: var(--headerFont);
+  font-size: var(--40px);
+  line-height: var(--40px);
   color: var(--text);
 }
 #header-part-el {
@@ -23,15 +48,45 @@ body {
 }
 
 #lower-header-el {
-  color: var(--textTwo);
+  margin-top: 0;
+  margin-bottom: var(--45px);
+  font-family: var(--textFont);
+  font-weight: 400;
+  font-size: var(--20px);
+  color: var(--textSecondary);
 }
 
 #generate-btn-el {
-  background-color: var(--green);
+  margin-top: 0;
+  margin-bottom: var(--25px);
+  padding: var(--9px) var(--15px) var(--9px) var(--15px);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--6px);
+  font-size: var(--16px);
+  font-weight: 500;
+  color: var(--text);
+  background-color: var(--greenSecondary);
 }
 
 #horizontal-devider-el {
-  width: 95%;
+  border: 1px solid var(--backgroundSecondary);
+}
+
+#passwords-container {
+  display: flex;
+  flex-direction: row;
+  gap: var(--20px);
+  margin-top: var(--25px);
+}
+
+.passwords {
+  width: var(--200px);
+  height: var(--40px);
+  border-radius: var(--6px);
+  font-size: var(--16px);
+  font-weight: 500;
+  line-height: var(--40px);
+  background-color: var(--backgroundSecondary);
+  color: var(--green);
+  text-align: center;
 }
