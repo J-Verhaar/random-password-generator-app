@@ -52,11 +52,21 @@
         Generate a <span id="header-part-el">random password</span>
       </h1>
       <h2 id="lower-header-el">Never use an insecure password again.</h2>
-      <button id="generate-btn-el">Generate passwords</button>
+      <button id="generate-btn-el" onclick="generatePasswords()">
+        Generate passwords
+      </button>
       <hr id="horizontal-devider-el" />
       <div id="passwords-container">
-        <p class="passwords" id="password-one-el"></p>
-        <p class="passwords" id="password-two-el"></p>
+        <button
+          class="passwords"
+          id="password-one-el"
+          onclick="copy(1)"
+        ></button>
+        <button
+          class="passwords"
+          id="password-two-el"
+          onclick="copy(2)"
+        ></button>
       </div>
     </section>
     <script src="index.js"></script>

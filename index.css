@@ -1,6 +1,8 @@
 :root {
   --background: #1f2937;
   --backgroundSecondary: #2f3e53;
+  --backgroundSecondaryHover: #283446;
+  --backgroundSecondaryActive: #202a38;
   --text: #fff;
   --textSecondary: #d5d4d8;
   --textLight: #fff;
@@ -29,6 +31,8 @@
 .lightmode {
   --background: #ecfdf5;
   --backgroundSecondary: #273549;
+  --backgroundSecondary: #1f2b3b;
+  --backgroundSecondary: #1c2633;
   --text: #111827;
   --textLight: #fff;
   --textSecondary: #6b7280;
@@ -144,4 +148,11 @@ body {
   background-color: var(--backgroundSecondary);
   color: var(--green);
   text-align: center;
+  border: none;
+}
+.passwords:hover {
+  background-color: var(--backgroundSecondaryHover);
+}
+.passwords:active {
+  background-color: var(--backgroundSecondaryActive);
 }
