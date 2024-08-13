@@ -3,10 +3,14 @@
   --backgroundSecondary: #2f3e53;
   --text: #fff;
   --textSecondary: #d5d4d8;
+  --textLight: #fff;
+  --green: #55f991;
+  --greenHeader: #55f991;
+  --greenSecondary: #10b981;
+  --greenSecondaryHover: #12a775;
+  --greenSecondaryActive: #14996d;
   --headerFont: Karla, Arial;
   --textFont: Inter, Arial;
-  --green: #55f991;
-  --greenSecondary: #10b981;
   --6px: 0.375rem;
   --9px: 0.5625rem;
   --10px: 0.625rem;
@@ -17,24 +21,67 @@
   --25px: 1.5625rem;
   --32px: 2rem;
   --40px: 2.5rem;
+  --50px: 3.125rem;
   --45px: 2.8125rem;
   --200px: 12.5rem;
-  --352px: 22rem;
+  --370px: 23.125rem;
+}
+.lightmode {
+  --background: #ecfdf5;
+  --backgroundSecondary: #273549;
+  --text: #111827;
+  --textLight: #fff;
+  --textSecondary: #6b7280;
+  --green: #5def92;
+  --greenHeader: #10b981;
+  --greenSecondary: #10b981;
+  --greenSecondaryHover: #12a775;
+  --greenSecondaryActive: #14996d;
+}
+
+body {
+  margin: 0;
   color: var(--text);
   background-color: var(--background);
   font-family: var(--text-font);
 }
 
-body {
-  margin: 0;
+#container {
+  margin: var(--40px);
 }
 
-#container {
-  margin: 40px;
+#theme-switch-el {
+  height: var(--50px);
+  width: var(--50px);
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--backgroundSecondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  top: var(--40px);
+  right: var(--40px);
+}
+#theme-switch-el svg {
+  fill: var(--textLight);
+}
+#theme-switch-el svg:last-child {
+  display: none;
+}
+.lightmode #theme-switch-el svg:first-child {
+  display: none;
+}
+.lightmode #theme-switch-el svg:last-child {
+  display: block;
+}
+#darkmode-icon {
+  fill: #ecfdf5;
 }
 
 #header-el {
-  width: var(--352px);
+  width: var(--370px);
   margin-top: 0px;
   margin-bottom: var(--12-8px);
 
@@ -42,9 +89,10 @@ body {
   font-size: var(--40px);
   line-height: var(--40px);
   color: var(--text);
+  font-weight: 800;
 }
 #header-part-el {
-  color: var(--green);
+  color: var(--greenHeader);
 }
 
 #lower-header-el {
@@ -66,6 +114,13 @@ body {
   font-weight: 500;
   color: var(--text);
   background-color: var(--greenSecondary);
+  color: var(--textLight);
+}
+#generate-btn-el:hover {
+  background-color: var(--greenSecondaryHover);
+}
+#generate-btn-el:active {
+  background-color: var(--greenSecondaryActive);
 }
 
 #horizontal-devider-el {
