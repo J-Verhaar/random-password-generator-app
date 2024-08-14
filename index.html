@@ -55,9 +55,38 @@
       <button id="generate-btn-el" onclick="generatePasswords()">
         Generate passwords
       </button>
-      <div class="length-container">
+      <div class="options-container">
         <p id="length-el">Length: 15</p>
         <input type="range" min="5" max="100" value="15" id="slider-el" />
+        <div class="switches-container">
+          <p class="switch-text">A</p>
+          <label class="switch" id="switch-capitals-el">
+            <input
+              type="checkbox"
+              checked
+              onchange="toggleCharacters('capitals')"
+            />
+            <span class="slider round"></span>
+          </label>
+          <p class="switch-text">1</p>
+          <label class="switch" id="switch-numbers-el">
+            <input
+              type="checkbox"
+              checked
+              onchange="toggleCharacters('numbers')"
+            />
+            <span class="slider round"></span>
+          </label>
+          <p class="switch-text">!</p>
+          <label class="switch" id="switch-symbols-el">
+            <input
+              type="checkbox"
+              checked
+              onchange="toggleCharacters('symbols')"
+            />
+            <span class="slider round"></span>
+          </label>
+        </div>
       </div>
       <hr id="horizontal-divider-el" />
       <div id="passwords-container">
