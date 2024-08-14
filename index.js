@@ -94,8 +94,18 @@ const characters = [
 
 let passwordOneEl = document.getElementById("password-one-el");
 let passwordTwoEl = document.getElementById("password-two-el");
+let lengthEl = document.getElementById("length-el");
+let sliderEl = document.getElementById("slider-el");
+let length = sliderEl.value;
 let randomPasswordOne = "";
 let randomPasswordTwo = "";
+
+lengthEl.textContent = "Length: " + sliderEl.value;
+
+sliderEl.oninput = function () {
+  lengthEl.textContent = "Length: " + sliderEl.value;
+  length = sliderEl.value;
+};
 
 function randomIndex() {
   return Math.floor(Math.random() * characters.length);
@@ -104,7 +114,7 @@ function randomIndex() {
 function generatePasswords() {
   randomPasswordOne = "";
   randomPasswordTwo = "";
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < length; i++) {
     randomPasswordOne += characters[randomIndex()];
     randomPasswordTwo += characters[randomIndex()];
   }

@@ -13,6 +13,8 @@
   --greenSecondaryActive: #14996d;
   --headerFont: Karla, Arial;
   --textFont: Inter, Arial;
+  --1px: 0.0625rem;
+  --5px: 0.3125rem;
   --6px: 0.375rem;
   --9px: 0.5625rem;
   --10px: 0.625rem;
@@ -23,10 +25,11 @@
   --25px: 1.5625rem;
   --32px: 2rem;
   --40px: 2.5rem;
-  --50px: 3.125rem;
   --45px: 2.8125rem;
+  --50px: 3.125rem;
+  --90px: 5.625rem;
   --200px: 12.5rem;
-  --370px: 23.125rem;
+  --352px: 22rem;
 }
 .lightmode {
   --background: #ecfdf5;
@@ -67,6 +70,7 @@ body {
   position: absolute;
   top: var(--40px);
   right: var(--40px);
+  cursor: pointer;
 }
 #theme-switch-el svg {
   fill: var(--textLight);
@@ -85,13 +89,14 @@ body {
 }
 
 #header-el {
-  width: var(--370px);
+  width: var(--352px);
   margin-top: 0px;
   margin-bottom: var(--12-8px);
 
   font-family: var(--headerFont);
   font-size: var(--40px);
   line-height: var(--40px);
+  letter-spacing: calc(var(--1px) * -1);
   color: var(--text);
   font-weight: 800;
 }
@@ -116,9 +121,11 @@ body {
   border-radius: var(--6px);
   font-size: var(--16px);
   font-weight: 500;
+  font-family: var(--textFont);
   color: var(--text);
   background-color: var(--greenSecondary);
   color: var(--textLight);
+  cursor: pointer;
 }
 #generate-btn-el:hover {
   background-color: var(--greenSecondaryHover);
@@ -127,20 +134,94 @@ body {
   background-color: var(--greenSecondaryActive);
 }
 
-#horizontal-devider-el {
+.length-container {
+  display: flex;
+  align-items: center;
+}
+
+#length-el {
+  font-family: var(--textFont);
+  font-size: var(--16px);
+  color: var(--textSecondary);
+  width: var(--90px);
+  font-weight: 500;
+}
+
+#slider-el {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--200px);
+  height: var(--10px);
+  border-radius: var(--5px);
+  background: var(--backgroundSecondary);
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+#slider-el:hover {
+  opacity: 1;
+}
+
+#slider-el::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: var(--16px);
+  height: var(--16px);
+  border-radius: 50%;
+  background: var(--green);
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+#slider-el::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#slider-el::-moz-range-progress {
+  background-color: var(--green);
+  height: var(--10px);
+  border-top-left-radius: var(--5px);
+  border-bottom-left-radius: var(--5px);
+}
+
+#slider-el::-moz-range-thumb {
+  width: var(--16px);
+  height: var(--16px);
+  border-radius: 50%;
+  border: none;
+  background: var(--green);
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+#slider-el::-moz-range-thumb:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#horizontal-divider-el {
   border: 1px solid var(--backgroundSecondary);
 }
 
 #passwords-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: var(--20px);
   margin-top: var(--25px);
 }
 
 .passwords {
-  width: var(--200px);
-  height: var(--40px);
+  padding-left: var(--5px);
+  padding-right: var(--5px);
+  min-height: var(--40px);
+  min-width: var(--200px);
   border-radius: var(--6px);
   font-size: var(--16px);
   font-weight: 500;
@@ -149,6 +230,8 @@ body {
   color: var(--green);
   text-align: center;
   border: none;
+  word-break: break-all;
+  cursor: pointer;
 }
 .passwords:hover {
   background-color: var(--backgroundSecondaryHover);
