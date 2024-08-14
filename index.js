@@ -179,6 +179,8 @@ function randomIndex(randomSet) {
 }
 
 function generatePasswords() {
+  console.log(characters);
+  console.log(characters.indexOf(charactersNumbers));
   randomPasswordOne = "";
   randomPasswordTwo = "";
   for (let i = 0; i < length; i++) {
@@ -199,17 +201,19 @@ function copy(number) {
 }
 
 function toggleCharacters(type) {
-  let capitalsEnabled;
-  let numbersEnabled;
-  let symbolsEnabled;
+  let capitalsEnabled = document.getElementById("capital-switch").checked;
+  let numbersEnabled = document.getElementById("number-switch").checked;
+  let symbolsEnabled = document.getElementById("symbol-switch").checked;
   if (type === "capitals" && capitalsEnabled) {
     const index = characters.indexOf(charactersUpperCase);
+    console.log(index);
     if (index > -1) {
       characters.splice(index, 1);
     }
     capitalsEnabled = false;
   } else if (type === "capitals" && !capitalsEnabled) {
     characters.push(upperCaseCharacters);
+    capitalsEnabled = true;
   } else if (type === "numbers" && numbersEnabled) {
     const index = characters.indexOf(charactersNumbers);
     if (index > -1) {
@@ -218,6 +222,7 @@ function toggleCharacters(type) {
     numbersEnabled = false;
   } else if (type === "numbers" && !numbersEnabled) {
     characters.push(numberCharacters);
+    numbersEnabled = true;
   } else if (type === "symbols" && symbolsEnabled) {
     const index = characters.indexOf(charactersSymbols);
     if (index > -1) {
@@ -226,5 +231,6 @@ function toggleCharacters(type) {
     symbolsEnabled = false;
   } else if (type === "symbols" && !symbolsEnabled) {
     characters.push(symbolCharacters);
+    symbolsEnabled = true;
   }
 }
