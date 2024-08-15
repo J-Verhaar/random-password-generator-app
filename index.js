@@ -88,7 +88,7 @@ let characters = [
     "/",
   ]),
 ];
-const upperCaseCharacters = [
+/* const charactersUpperCase = [
   "A",
   "B",
   "C",
@@ -116,8 +116,8 @@ const upperCaseCharacters = [
   "Y",
   "Z",
 ];
-const numberCharacters = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const symbolCharacters = [
+const charactersNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const charactersSymbols = [
   "~",
   "`",
   "!",
@@ -147,7 +147,7 @@ const symbolCharacters = [
   ".",
   "?",
   "/",
-];
+]; */
 let passwordOneEl = document.getElementById("password-one-el");
 let passwordTwoEl = document.getElementById("password-two-el");
 let lengthEl = document.getElementById("length-el");
@@ -179,8 +179,6 @@ function randomIndex(randomSet) {
 }
 
 function generatePasswords() {
-  console.log(characters);
-  console.log(characters.indexOf(charactersNumbers));
   randomPasswordOne = "";
   randomPasswordTwo = "";
   for (let i = 0; i < length; i++) {
@@ -190,6 +188,7 @@ function generatePasswords() {
   }
   passwordOneEl.textContent = randomPasswordOne;
   passwordTwoEl.textContent = randomPasswordTwo;
+  console.log(characters);
 }
 
 function copy(number) {
@@ -201,9 +200,9 @@ function copy(number) {
 }
 
 function toggleCharacters(type) {
-  let capitalsEnabled = document.getElementById("capital-switch").checked;
-  let numbersEnabled = document.getElementById("number-switch").checked;
-  let symbolsEnabled = document.getElementById("symbol-switch").checked;
+  let capitalsEnabled = true;
+  let numbersEnabled = true;
+  let symbolsEnabled = true;
   if (type === "capitals" && capitalsEnabled) {
     const index = characters.indexOf(charactersUpperCase);
     console.log(index);
@@ -212,7 +211,7 @@ function toggleCharacters(type) {
     }
     capitalsEnabled = false;
   } else if (type === "capitals" && !capitalsEnabled) {
-    characters.push(upperCaseCharacters);
+    characters.push(charactersUpperCase);
     capitalsEnabled = true;
   } else if (type === "numbers" && numbersEnabled) {
     const index = characters.indexOf(charactersNumbers);
@@ -221,7 +220,7 @@ function toggleCharacters(type) {
     }
     numbersEnabled = false;
   } else if (type === "numbers" && !numbersEnabled) {
-    characters.push(numberCharacters);
+    characters.push(charactersNumbers);
     numbersEnabled = true;
   } else if (type === "symbols" && symbolsEnabled) {
     const index = characters.indexOf(charactersSymbols);
@@ -230,7 +229,7 @@ function toggleCharacters(type) {
     }
     symbolsEnabled = false;
   } else if (type === "symbols" && !symbolsEnabled) {
-    characters.push(symbolCharacters);
+    characters.push(charactersSymbols);
     symbolsEnabled = true;
   }
 }

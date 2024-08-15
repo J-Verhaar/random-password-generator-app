@@ -46,7 +46,7 @@
   --backgroundSecondary: #1c2633;
   --text: #111827;
   --textLight: #fff;
-  --textSecondary: #6b7280;
+  --textSecondary: #000000;
   --green: #5def92;
   --greenHeader: #10b981;
   --greenSecondary: #10b981;
@@ -217,39 +217,17 @@ body {
   cursor: -webkit-grabbing;
 }
 
-#horizontal-divider-el {
-  border: 1px solid var(--backgroundSecondary);
-}
-
-#passwords-container {
+.switches-container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--20px);
-  margin-top: var(--25px);
+  gap: var(--10px);
+  align-items: center;
 }
 
-.passwords {
-  padding-left: var(--5px);
-  padding-right: var(--5px);
-  min-height: var(--40px);
-  min-width: var(--200px);
-  border-radius: var(--6px);
-  font-size: var(--16px);
-  font-weight: 500;
-  line-height: var(--40px);
-  background-color: var(--backgroundSecondary);
-  color: var(--green);
+.switch-text {
   text-align: center;
-  border: none;
-  word-break: break-all;
-  cursor: pointer;
-}
-.passwords:hover {
-  background-color: var(--backgroundSecondaryHover);
-}
-.passwords:active {
-  background-color: var(--backgroundSecondaryActive);
+  font-family: var(--greenInactiveSecondary);
+  color: var(--textSecondary);
+  font-weight: 700;
 }
 
 .switch {
@@ -311,12 +289,37 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.switch-text {
-  text-align: center;
+#horizontal-divider-el {
+  border: 1px solid var(--backgroundSecondary);
 }
 
-.switches-container {
+#passwords-container {
   display: flex;
-  gap: var(--10px);
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--20px);
+  margin-top: var(--25px);
+}
+
+.passwords {
+  padding-left: var(--5px);
+  padding-right: var(--5px);
+  min-height: var(--40px);
+  min-width: var(--200px);
+  border-radius: var(--6px);
+  font-size: var(--16px);
+  font-weight: 500;
+  line-height: var(--40px);
+  background-color: var(--backgroundSecondary);
+  color: var(--green);
+  text-align: center;
+  border: none;
+  word-break: break-all;
+  cursor: pointer;
+}
+.passwords:hover {
+  background-color: var(--backgroundSecondaryHover);
+}
+.passwords:active {
+  background-color: var(--backgroundSecondaryActive);
 }
