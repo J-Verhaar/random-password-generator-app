@@ -12,7 +12,7 @@ const disableLightmode = () => {
 };
 
 if (lightmode === "active") {
-  enableLightmode;
+  enableLightmode();
 }
 
 themeSwitchEL.addEventListener("click", () => {
