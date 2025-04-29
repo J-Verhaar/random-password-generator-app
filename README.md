@@ -16,9 +16,3 @@ https://j-verhaar.github.io/random-password-generator-app/
 ## License
 
 https://www.apache.org/licenses/LICENSE-2.0
-
-
-
-## 🚀 About Me
-I'm a solo developer still learning to code.
-
