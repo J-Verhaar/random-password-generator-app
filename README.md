@@ -2,7 +2,7 @@
 # Random Password generator
 
 Password generator I made to learn Javascript using Scrimba.
-These passwords might not be very safe only use for non important accounts.
+These passwords may not be secure.
 
 
 ## Website
