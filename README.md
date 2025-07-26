@@ -6,7 +6,7 @@ These passwords may not be secure.
 
 
 ## Website
-https://j-verhaar.github.io/random-password-generator-app/
+https://j-verhaar.github.io/Random_Password_Generator/
 ## Features
 
 - Light/dark mode toggle
